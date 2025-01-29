@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.38, for macos14 (x86_64)
+--
+-- Host: localhost    Database: react_foundation
+-- ------------------------------------------------------
+-- Server version	9.0.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `path` varchar(100) DEFAULT NULL,
+  `uid` varchar(100) DEFAULT NULL,
+  `secret` varchar(255) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(100) DEFAULT NULL,
+  `permission` enum('admin','restricted') DEFAULT 'restricted',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (4,'user/6b8a2170-98ef-488a-8c06-e02dac44f1d2','6b8a2170-98ef-488a-8c06-e02dac44f1d2','PBEE6QDGO46FCVBZOA5EKTCVKRUTI2DDEE6CQPRPOVRUIRJUKBQQ','nejc.gjurameke@gmail.com','testtest123','admin'),(12,'user/e881309c-6162-4a83-8454-c56a7436a48d','e881309c-6162-4a83-8454-c56a7436a48d','GVOVM4CDHY5DGLDQJNUUCSJFMI5HGY2VOZRFC3CRPNFEWU3QFJLA','nejc.gjurameke@gmail.c2','testtest12','restricted'),(13,'user/9900019f-3c81-4632-b946-a79bc5535ecd','9900019f-3c81-4632-b946-a79bc5535ecd','HJSC43KDHRDS6U25JFDHEVDPOY6CG3DGOJHHOXKAF54DQS3WGE3Q','tadej.gjurameke@gmail.com','GOtadejtadej123','admin'),(14,'user/6b9bab22-a5d0-48bf-bc03-eedd2104c4ef','6b9bab22-a5d0-48bf-bc03-eedd2104c4ef','LBEWMUB6PFXWIRZQFFBUG4S6JZQUMLZPENZVIRSRJATGOZR2JFJA','test@gmail.com','testtest123','restricted'),(28,'user/637af0c5-cbf0-43a7-9cb2-dca6c959f676','637af0c5-cbf0-43a7-9cb2-dca6c959f676','KRATAURJKY7TUJKFNFTVUU2NMJUDA6KCFJDS6JCJKJCDY6LXHE4Q','nejc@test.com','nejcnejc123','restricted');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-01-29 15:38:56
